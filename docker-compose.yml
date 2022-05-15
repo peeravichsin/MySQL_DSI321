@@ -1,0 +1,39 @@
+version: "3.7"
+services:
+
+  dsi324:
+    build: ./web/.
+    ports:
+      - 5000:5000
+    volumes:
+      - ./web/.:/code
+    environment:
+      FLASK_ENV: development
+
+  mysql:
+    build: ./mysql
+    environment:
+      MYSQL_DATABASE: dsi324
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: 0.0.0.0
+      MYSQL_USER: socps
+      MYSQL_PASSWORD: soccer481200
+    ports:
+      - 3306:3306
+
+
+
+  # old
+  ### MySQL Container
+  # mysql:
+  #     build:
+  #         context: 
+  #         args:
+  #             - MYSQL_DATABASE=${MYSQL_DATABASE}
+  #             # - MYSQL_USER=${MYSQL_USER}
+  #             # - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+  #             - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+  #     ports:
+  #         - "${MYSQL_PORT}:3306"
+
+ ### Flask web app 
