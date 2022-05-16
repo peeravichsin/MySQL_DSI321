@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 ## Running The Website
 
-Go to /web and then run this command below and website is running :)
+Go to "web" directory and then run this command below and website is running :)
 ```bash
 python main.py
 ```
@@ -64,7 +64,7 @@ git clone https://github.com/peeravichsin/MySQL_DSI321
 
 # On deploy
 
-In this step is a bit tricky here the solution
+Go to MySQL_DSI321 directory and follow step below
 
 1. For create a MySQL svever and host the website 
 ```bash
