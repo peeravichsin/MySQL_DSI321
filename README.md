@@ -37,8 +37,8 @@ python main.py
  - Protocol --> Any
  - Action --> Allow
  - Priority --> Let Azure select for you Ex. 3xx 
- - Name --> <any name you like>
- - Description --> <any thing you want to describe>
+ - Name --> "any name you like"
+ - Description --> "any thing you want to describe"
 
 3.Open Powershell and connect to Vms using ssh method
   
