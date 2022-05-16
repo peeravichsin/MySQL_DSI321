@@ -9,10 +9,11 @@ def create_app():
     global mysql
     app = Flask(__name__)
     app.secret_key = "ifyouknowyouknowandifyoudontknowyoudontknow"
-    app.config['MYSQL_HOST'] = "localhost"
+    app.config['MYSQL_HOST'] = "mysql"
     app.config['MYSQL_USER'] = "root"
     app.config['MYSQL_PASSWORD'] = "soccer481200"
     app.config['MYSQL_DB'] = "dsi324"
+    app.config['JSON_AS_ASCII'] = False
     mysql = MySQL(app)
 
     from .views import views

@@ -284,3 +284,26 @@ def studyplan():
 
     
     return render_template('studyplan.html', plan_list=plan_list, sub_desc=sub_desc,year=year,modules=modules)
+
+
+@views.route('/api/<variable>')
+def api_result(variable):
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    if '-' in variable:
+        choice = variable.split('-')
+
+        if choice[1] == 'subjects':
+            if choice[0] == 'ALL':
+                cursor.execute("SELECT * FROM subjects")
+                result = cursor.fetchall()
+                
+            else:
+                cursor.execute(f"SELECT * FROM subjects WHERE subject_id LIKE '{choice[0]}%'")
+                result = cursor.fetchall()
+    else:
+            result = {"ข้อความ":"ทำได้แค่ Subject ครับ ขอประทานโทษ"}  
+    return jsonify(result)
+
+@views.route('/api')
+def api():
+    return render_template('api_page.html')
