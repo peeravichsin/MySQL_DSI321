@@ -1,4 +1,4 @@
-from flask import Blueprint, Flask, redirect, render_template, request, flash, session, url_for
+from flask import Blueprint, Flask, redirect, render_template, request, flash, session, url_for, jsonify
 from .auth import login_is_required
 from website import auth
 from flask_mysqldb import  MySQLdb
