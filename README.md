@@ -2,7 +2,7 @@
 
 ## Setup & Installtion
 
-clone code to your working directory
+Clone code to your working directory
 ```bash
 git clone https://github.com/peeravichsin/MySQL_DSI321
 ```
