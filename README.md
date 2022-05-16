@@ -3,7 +3,7 @@
 ## Setup & Installtion
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/peeravichsin/MySQL_DSI321
 ```
 
 ```bash
@@ -18,6 +18,7 @@ python main.py
 
 # Setup Docker in VM
 
+To setup your Linux VMs in Azure 
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
@@ -29,14 +30,24 @@ newgrp docker
 docker run hello-world
 ```
 
-## Git Clone all the code to VM
-```bash
-git clone https://github.com/peeravichsin/DSI324
-```
+## Git Clone all the code to VMs
 
+Clone code and resouce to VMs
+```bash
+git clone https://github.com/peeravichsin/MySQL_DSI321
+```
 
 # On deploy
 
+In this step is a bit tricky here the solution
+
+1. For create a MySQL svever
+```bash
+docker-compose up --build
+```
+2. Then press CTRL+C when process done
+
+3. And then compose up again and you are good to go :)
 ```bash
 docker-compose up
 ```
