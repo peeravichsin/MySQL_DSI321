@@ -2,9 +2,12 @@
 
 ## Setup & Installtion
 
+clone code to your working directory
 ```bash
 git clone https://github.com/peeravichsin/MySQL_DSI321
 ```
+
+Install library for this Project
 
 ```bash
 pip install -r requirements.txt
@@ -12,11 +15,15 @@ pip install -r requirements.txt
 
 ## Running The Website
 
+Go to /web and then run this command below and website is running :)
 ```bash
 python main.py
 ```
 
+
 # Setup Docker in VM
+
+## Setup & Installtion
 
 To setup your Linux VMs in Azure 
 ```bash
@@ -30,7 +37,7 @@ newgrp docker
 docker run hello-world
 ```
 
-## Git Clone all the code to VMs
+# Git Clone all the code to VMs
 
 Clone code and resouce to VMs
 ```bash
