@@ -25,7 +25,25 @@ python main.py
 
 ## Setup & Installtion
 
-To setup your Linux VMs in Azure 
+1.Create Vms in Azure
+
+2.Go to Networking and then Add inbound port rule follow this step below
+
+ - source --> Any  
+ - Source port ranges --> *
+ - Destination --> Any
+ - Service --> Custom
+ - Destination port ranges --> 5000 **Attention this is very important**
+ - Protocol --> Any
+ - Action --> Allow
+ - Priority --> Let Azure select for you Ex. 3xx 
+ - Name --> <any name you like>
+ - Description --> <any thing you want to describe>
+
+3.Open Powershell and connect to Vms using ssh method
+  
+4.To setup your Linux VMs in Azure 
+  
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
@@ -48,16 +66,15 @@ git clone https://github.com/peeravichsin/MySQL_DSI321
 
 In this step is a bit tricky here the solution
 
-1. For create a MySQL svever
+1. For create a MySQL svever and host the website 
 ```bash
 docker-compose up --build
 ```
-2. Then press CTRL+C when process done
 
-3. And then compose up again and you are good to go :)
+2. if you want to stop the process
 ```bash
-docker-compose up
+docker-compose down
 ```
 
-
+Thank you for reading :)
 
