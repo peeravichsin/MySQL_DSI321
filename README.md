@@ -33,7 +33,7 @@ python main.py
  - Source port ranges --> *
  - Destination --> Any
  - Service --> Custom
- - Destination port ranges --> 5000 **Attention this is very important**
+ - Destination port ranges --> 5000   (**Attention this is very important**)
  - Protocol --> Any
  - Action --> Allow
  - Priority --> Let Azure select for you Ex. 3xx 
